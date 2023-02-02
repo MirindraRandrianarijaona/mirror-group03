@@ -15,12 +15,15 @@ class index:
             pw='insigroup00',
             db='project00',
         )
-        a2=db.select('Album', limit=20)
-        artists=db.select('Artist', limit=20)
-        genres=db.select('Genre',limit=20)
-        result = '<html><head><title>test</title></head>'
+        a2=db.select('Album', limit=10)
+        artists=db.select('Artist', limit=10)
+        genres=db.select('Genre',limit=10)
+        tracks=db.select('Track',limit=10)
+        media_types=db.select('MediaType',limit=10)
+        playlists=db.select('Playlist',limit=10)
+        result = '<html><head><title>Server.py G03</title></head>'
         result += '<table border="1">'
-        result += '<tr><th>Genre</th><th>Artists</th><th>Album</th>'
+        result += '<tr><th>Genre</th><th>Artists</th><th>Album</th><th>Track</th><th>Media type</th><th>Playlist</th>'
         for a in a2:
             result +='<tr>'
             for genre in genres:
@@ -28,6 +31,15 @@ class index:
                 break
             for artist in artists:
                 result +='<td>'+artist.Name+'</td>'
+                break
+            for track in tracks:
+                result +='<td>'+track.Name+'</td>'
+                break
+            for media_type in media_types:
+                result +='<td>'+ media_type.Name+'</td>'
+                break
+            for playlist in playlists:
+                result +='<td>'+playlist.Name+'</td>'
                 break
             result +='<td>'+a.Title+'</td>'
             result +='</tr>'
