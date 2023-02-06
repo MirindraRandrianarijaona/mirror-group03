@@ -25,7 +25,7 @@ class index:
         result = '<html><head><title>Server.py G03</title>'
         result += '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">'
         result += '</head>'
-        result += '<h2>Lists of album with their genre</h2>'
+        result += '<h2>List of album with their genre</h2>'
         result += '<div class=container>'
         result += '<table class="table table-striped">'
         result += '<tr><th>Genre</th><th>Artists</th><th>Album</th><th>Track</th><th>Media type</th><th>Playlist</th>'
