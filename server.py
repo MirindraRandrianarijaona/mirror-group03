@@ -16,6 +16,7 @@ class index:
             db='project00',
         )
         a2=db.select('Album', limit=10)
+        albumids=db.select('Album', limit=10)
         artists=db.select('Artist', limit=10)
         genres=db.select('Genre', limit=10)
         tracks=db.select('Track', limit=10)
@@ -28,9 +29,12 @@ class index:
         result += '<h2>List of album with their genre</h2>'
         result += '<div class=container>'
         result += '<table class="table table-striped">'
-        result += '<tr><th>Genre</th><th>Artists</th><th>Album</th><th>Track</th><th>Media type</th><th>Playlist</th>'
+        result += '<tr><th>Id</th><th>Genre</th><th>Artists</th><th>Album</th><th>Track</th><th>Media type</th><th>Playlist</th>'
         for a in a2:
             result +='<tr>'
+            for albumid in albumids:
+                result +='<td>'+str(albumid.AlbumId)+'</td>'
+                break
             for genre in genres:
                 result +='<td>'+genre.Name+'</td>'
                 break
