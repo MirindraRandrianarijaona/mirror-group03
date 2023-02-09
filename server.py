@@ -28,7 +28,7 @@ class index:
         result += '</head>'
         result += '<h2>List of album with their genre</h2>'
         result += '<div class=container>'
-        result += '<table class="table table-striped">'
+        result += '<table class="table table-dark">'
         result += '<tr><th>Id</th><th>Genre</th><th>Artists</th><th>Album</th><th>Track</th><th>Media type</th><th>Playlist</th>'
         for a in a2:
             result +='<tr>'
