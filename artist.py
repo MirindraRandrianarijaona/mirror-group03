@@ -3,8 +3,8 @@ from DB import Db
 web.config.debug = True
 
 urls = (
-    '/', 'artist',
-    '/index','index',
+    '/', 'artist'
+    '/index', 'index',
     '/artist', 'artist'
 )
 
@@ -25,9 +25,9 @@ class artist:
         result += '<li class="nav-item"><a class="nav-link" href="/genre">Genre</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="/artist">Artists</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="/album">Album</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Track</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Media type</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Playlist</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/track">Track</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/media">Media type</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/playlist">Playlist</a></li>'
         result += '</ul>'
         result += '</div>'
         result += '</nav>'
