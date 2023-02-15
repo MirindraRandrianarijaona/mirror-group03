@@ -3,13 +3,20 @@ from DB import Db
 from album import album
 from artist import artist
 from genre import genre
+from playlist import playlist
+from media_type import media
+from track import track
 web.config.debug = True
 
 urls = (
     '/', 'index',
+    '/index','index',
     '/album', 'album',
     '/artist', 'artist',
-    '/genre', 'genre'
+    '/genre', 'genre',
+    '/track', 'track',
+    '/playlist', 'playlist',
+    '/media', 'media',
 )
 
 class index:
@@ -41,10 +48,10 @@ class index:
         result += '<li class="nav-item"><a class="nav-link" href="/index">Accueil</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="/genre">Genre</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="/artist">Artists</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/album">Album</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Track</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Media type</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Playlist</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/album.py">Album</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/track">Track</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/media">Media type</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/playlist">Playlist</a></li>'
         result += '</ul>'
         result += '</div>'
         result += '</nav>'
