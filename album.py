@@ -3,10 +3,12 @@ from DB import Db
 web.config.debug = True
 
 urls = (
-    '/', 'index'
+    '/', 'album',
+    '/index','index',
+    '/album', 'album'
 )
 
-class index:
+class album:
     def GET(self):
         d = Db()
         db = d.getDb()
@@ -17,10 +19,10 @@ class index:
         result += '<nav class="navbar navbar-expand-sm bg-light">'
         result += '<div class="container-fluid">'
         result += '<ul class="navbar-nav">'
-        result += '<li class="nav-item"><a class="nav-link" href="server.py">Accueil</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="genre.py">Genre</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="artist.py">Artists</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="album.py">Album</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/index">Accueil</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/genre">Genre</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/artist">Artists</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/album">Album</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Track</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Media type</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Playlist</a></li>'
