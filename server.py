@@ -1,9 +1,15 @@
 import web
 from DB import Db 
+from album import album
+from artist import artist
+from genre import genre
 web.config.debug = True
 
 urls = (
-    '/', 'index'
+    '/', 'index',
+    '/album', 'album',
+    '/artist', 'artist',
+    '/genre', 'genre'
 )
 
 class index:
@@ -32,9 +38,10 @@ class index:
         result += '<nav class="navbar navbar-expand-sm bg-light">'
         result += '<div class="container-fluid">'
         result += '<ul class="navbar-nav">'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Genre</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Artists</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Album</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/index">Accueil</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/genre">Genre</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/artist">Artists</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" href="/album">Album</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Track</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Media type</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Playlist</a></li>'
