@@ -11,4 +11,5 @@ COPY ./genre.py /genre.py
 COPY ./media_type.py /media_type.py
 COPY ./playlist.py /playlist.py
 COPY ./track.py /track.py
+COPY ./nav.py /nav.py
 CMD [ "python", "/server.py" ]
