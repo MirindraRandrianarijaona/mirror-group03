@@ -1,4 +1,5 @@
 import web
+import nav
 from DB import Db 
 from album import album
 from artist import artist
@@ -42,19 +43,8 @@ class index:
         result = '<html><head><title>Server.py G03</title>'
         result += '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">'
         result += '</head>'
-        result += '<nav class="navbar navbar-expand-sm bg-light">'
-        result += '<div class="container-fluid">'
-        result += '<ul class="navbar-nav">'
-        result += '<li class="nav-item"><a class="nav-link" href="/index">Accueil</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/genre">Genre</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/artist">Artists</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/album.py">Album</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/track">Track</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/media">Media type</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="/playlist">Playlist</a></li>'
-        result += '</ul>'
-        result += '</div>'
-        result += '</nav>'
+        result += '<body>'
+        result += nav.nav()
         result += '<h2>List of album with their genre</h2>'
         result += '<div class=container>'
         result += '<table class="table table-dark">'
